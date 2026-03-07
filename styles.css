@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-color: #f8f9fa;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#nav-placeholder {
+  margin-bottom: 1rem;
+}
+
+nav a {
+  margin-right: 0.75rem;
+  color: #0b5ed7;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+}
+
+/* p {
+  margin-bottom: 1rem;
+} */
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background: #f0f0f0;
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: 1.5rem auto;
+  text-align: center;
+  max-width: fit-content;
+}
+
+h1,
+h3,
+p,
+figure,
+form,
+button {
+  animation-duration: 3s;
+  animation-name: slide-in;
+}
+
+@keyframes slide-in {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+.core {
+  color: #181bc2;
+}
+
+.elective {
+  color: #c2185b;
+}
+
+.track {
+  color: #18c23d;
+}
