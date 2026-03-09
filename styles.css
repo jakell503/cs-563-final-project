@@ -30,6 +30,10 @@ nav a:hover {
   text-decoration: underline;
 }
 
+nav a.active-page {
+  font-weight: 700;
+}
+
 h1,
 h2,
 h3,
@@ -37,9 +41,9 @@ h4 {
   margin-top: 0;
 }
 
-/* p {
-  margin-bottom: 1rem;
-} */
+p {
+  font-family: "Poppins", sans-serif;
+}
 
 button,
 input,
@@ -113,9 +117,20 @@ button {
 }
 
 .elective {
-  color: #c2185b;
+  color: #a618c2;
 }
 
 .track {
-  color: #18c23d;
+  color: #c21818;
+}
+
+/* Format the course cards in the Previous Work tab */
+.course-card h3,
+.course-card p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.course-card p:last-of-type {
+  margin-bottom: 1rem;
 }

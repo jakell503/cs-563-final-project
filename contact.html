@@ -1,53 +1,53 @@
 <!doctype html>
-<html lang="en"></html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="Jack Kelly" />
-    <meta
-      name="description"
-      content="This is the contact page for Jack Kelly's website."
-    />
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main>
-      <div id="nav-placeholder"></div>
+<html lang="en">
+  <html>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="author" content="Jack Kelly" />
+      <meta
+        name="description"
+        content="This is the contact page for Jack Kelly's website."
+      />
+      <title>Contact Form</title>
+      <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+      <main>
+        <div id="nav-placeholder"></div>
 
-      <h1>Contact Page</h1>
-      <form id="contactForm">
-        <div class="emailBox">
-          <label for="emailAddress">Your email address</label><br />
-          <input
-            id="emailAddress"
-            type="email"
-            size="64"
-            maxlength="64"
-            required
-            placeholder="username@pdx.edu"
-            pattern=".+@pdx\.edu"
-            title="Please provide a valid PDX email address"
-          />
-        </div>
+        <form id="contactForm">
+          <div class="emailBox">
+            <label for="emailAddress">Your email address</label><br />
+            <input
+              id="emailAddress"
+              type="email"
+              size="64"
+              maxlength="64"
+              required
+              placeholder="username@pdx.edu"
+              pattern=".+@pdx\.edu"
+              title="Please provide a valid PDX email address"
+            />
+          </div>
 
-        <div class="messageBox">
-          <label for="message">Request</label><br />
-          <textarea
-            id="message"
-            cols="80"
-            rows="8"
-            required
-            placeholder="I love your website!"
-          ></textarea>
-        </div>
+          <div class="messageBox">
+            <label for="message">Request</label><br />
+            <textarea
+              id="message"
+              cols="80"
+              rows="8"
+              required
+              placeholder="I love your website!"
+            ></textarea>
+          </div>
 
-        <input type="submit" value="Send Request" />
-        <input type="reset" value="Reset Form" />
-      </form>
+          <input type="submit" value="Send Request" />
+          <input type="reset" value="Reset Form" />
+        </form>
 
-      <script src="form.js"></script>
-      <script src="nav-loader.js"></script>
-    </main>
-  </body>
+        <script src="form.js"></script>
+        <script src="nav-loader.js"></script>
+      </main>
+    </body>
+  </html>
 </html>
