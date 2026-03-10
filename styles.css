@@ -1,7 +1,9 @@
+/* Apply border-box sizing to all elements */
 * {
   box-sizing: border-box;
 }
 
+/* Body and main container styles used in bootstrap */
 body {
   margin: 0;
   padding: 1rem;
@@ -11,46 +13,60 @@ body {
   background-color: #f8f9fa;
 }
 
+/* Center main content */
 main {
   max-width: 900px;
   margin: 0 auto;
 }
 
+/* Add space below navigation */
 #nav-placeholder {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
+/* Center navigation */
+nav {
+  text-align: center;
+}
+
+/* Style nav bar */
 nav a {
-  margin-right: 0.75rem;
+  margin-right: 2rem;
   color: #0b5ed7;
-  text-decoration: none;
+  text-decoration: none; /* remove underline*/
 }
 
+/* Underline nav bar when user hovers */
 nav a:hover {
   text-decoration: underline;
 }
 
+/* Bold the current page */
 nav a.active-page {
   font-weight: 700;
 }
 
-h1,
+/* Remove top margin from headings */
+/* h1,
 h2,
 h3,
 h4 {
   margin-top: 0;
-}
+} */
 
+/* Apply Poppins font to paragraphs */
 p {
   font-family: "Poppins", sans-serif;
 }
 
+/* Button font inherits same font as the rest of the page */
 button,
 input,
 textarea {
   font: inherit;
 }
 
+/* Button and submit input styles */
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -61,12 +77,14 @@ input[type="reset"] {
   cursor: pointer;
 }
 
+/* Button hover effect */
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
   background: #f0f0f0;
 }
 
+/* Input and text area styles */
 input,
 textarea {
   width: 100%;
@@ -78,29 +96,47 @@ textarea {
   border-radius: 0.25rem;
 }
 
-img {
+/* Responsive images */
+/* img {
   max-width: 100%;
   height: auto;
   display: block;
-}
+} */
 
+/* Center photo on About*/
 figure {
   margin: 1.5rem auto;
   text-align: center;
   max-width: fit-content;
 }
 
+/* Apply slide-in animation to everything. Elements will come from all different directions. */
 h1,
-h3,
+h3 {
+  animation-duration: 3s;
+  animation-name: slide-in-right;
+}
+
 p,
-figure,
 form,
 button {
   animation-duration: 3s;
-  animation-name: slide-in;
+  animation-name: slide-in-left;
 }
 
-@keyframes slide-in {
+figure,
+nav {
+  animation-duration: 3s;
+  animation-name: slide-in-top;
+}
+
+.course-card {
+  animation-duration: 3s;
+  animation-name: slide-in-bottom;
+}
+
+/* Slide-in animation from right */
+@keyframes slide-in-right {
   from {
     translate: 150vw 0;
     scale: 200% 1;
@@ -112,25 +148,87 @@ button {
   }
 }
 
+/* Slide-in animation from left */
+@keyframes slide-in-left {
+  from {
+    translate: -150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+/* Slide-in animation from top */
+@keyframes slide-in-top {
+  from {
+    translate: 0 -100vh;
+    opacity: 0;
+  }
+
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+/* Slide-in animation from bottom */
+@keyframes slide-in-bottom {
+  from {
+    translate: 0 100vh;
+    opacity: 0;
+  }
+
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+/* Core course label - blue */
 .core {
   color: #181bc2;
 }
 
+/* Elective course label - purple */
 .elective {
   color: #a618c2;
 }
 
+/* Track course label - red */
 .track {
   color: #c21818;
 }
 
-/* Format the course cards in the Previous Work tab */
+/* Responsive grid layout for course cards */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Individual course card styling */
+.course-card {
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Card hover effect - lift and enhance shadow */
+.course-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Card text spacing */
 .course-card h3,
 .course-card p {
   margin-top: 0;
-  margin-bottom: 0;
-}
-
-.course-card p:last-of-type {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }

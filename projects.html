@@ -17,12 +17,44 @@
   <body>
     <main>
       <div id="nav-placeholder"></div>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis,
-        quaerat, quas nisi repellat laborum dicta expedita mollitia amet numquam
-        nam labore nemo! Provident reprehenderit ex impedit ut? Tempora, dolor
-        voluptate.
-      </p>
+      <div class="course-grid">
+        <div class="course-card">
+          <h3>BLS Database</h3>
+          <p>
+            This project was for CS 586 Databases. I created a database for
+            managing and querying inflation data from the Bureau of Labor
+            Statistics.
+          </p>
+        </div>
+        <div class="course-card">
+          <h3>CNN Comparison</h3>
+          <p>
+            This project was for CS 541 Artificial Intelligence and compares a
+            custom shallow CNN with a pretrained DenseNet-121 for classifying
+            five thoracic diseases in the CheXpert chest X-ray dataset.
+          </p>
+          <p>
+            Both models used the U-Zeros policy for uncertain labels and were
+            trained under identical conditions. DenseNet-121 consistently
+            outperformed the custom CNN, achieving a mean AUC of 0.7979 vs.
+            0.7335, with the largest gains in Cardiomegaly and Pleural Effusion,
+            which involve clearer structural abnormalities.
+          </p>
+
+          <p>
+            For texture-based findings like Consolidation and Edema, performance
+            differences were minimal or slightly negative. DenseNet-121 also
+            converged faster but overfit more quickly, requiring early stopping.
+          </p>
+          <p>
+            Overall, the results show that transfer learning provides meaningful
+            benefits, especially for structural pathologies, while shallow
+            models may be more robust to noisy or subtle labels. Future
+            improvements could include alternative uncertainty strategies, data
+            augmentation, or testing additional pretrained architectures.
+          </p>
+        </div>
+      </div>
 
       <script src="nav-loader.js"></script>
     </main>
