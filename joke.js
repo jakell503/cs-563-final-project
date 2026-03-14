@@ -18,7 +18,7 @@ function getJoke() {
       return response.json();
     })
     .then((data) => {
-      jokeElement.textContent = data.joke;
+      jokeElement.textContent = data.joke; //container to display the joke
     })
     .catch((error) => {
       console.error(error);

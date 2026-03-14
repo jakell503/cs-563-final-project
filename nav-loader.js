@@ -1,9 +1,10 @@
+// Look for the nav-placeholder element and load the navigation HTML into it
 document.addEventListener("DOMContentLoaded", () => {
   const placeholder = document.getElementById("nav-placeholder");
   if (!placeholder) {
     return;
   }
-
+  // Highlight the current page
   const setActiveNavLink = () => {
     const currentPath =
       window.location.pathname.split("/").pop() || "index.html";
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   };
-
+  // Load the navigation HTML from nav.html and insert it into the placeholder
   fetch("nav.html")
     .then((response) => {
       if (!response.ok) {

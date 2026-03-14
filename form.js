@@ -14,5 +14,11 @@ form.addEventListener("submit", function (event) {
   msg.style.color = "green";
   form.appendChild(msg);
 
+  setTimeout(() => {
+    if (msg.isConnected) {
+      msg.remove();
+    }
+  }, 5000);
+
   form.reset();
 });
